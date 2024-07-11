@@ -19,22 +19,16 @@ const getProductById = async (id: string) => {
 };
 const updatedProductById = async (
   id: string,
-  name: string,
-  description: string,
-  category: string,
-  tags: string[]
+  payLoad: Partial<TProduct>
 ) => {
-  const result = await Product.findByIdAndUpdate(id, {
-    name,
-    description,
-    category,
-    tags,
-  });
+  const result = await Product.findByIdAndUpdate(id, payLoad, 
+    {new: true}
+  );
   return result;
 };
 
-const deleteProductById = async (_id: string) => {
-  const result = await Product.findByIdAndDelete(_id);
+const deleteProductById = async (id: string) => {
+  const result = await Product.findByIdAndDelete(id);
   return result;
 };
 
