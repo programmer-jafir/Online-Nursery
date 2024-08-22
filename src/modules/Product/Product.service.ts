@@ -3,6 +3,7 @@ import { Product } from "./Product.model";
 
 const createProduct = async (payLoad: TProduct) => {
   const result = await Product.create(payLoad);
+  console.log(payLoad)
 
   return result;
 };

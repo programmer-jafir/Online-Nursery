@@ -4,21 +4,21 @@ exports.ProductValidation = exports.updateProductValidation = exports.createProd
 const zod_1 = require("zod");
 exports.createProductValidation = zod_1.z.object({
     body: zod_1.z.object({
-        _id: zod_1.z.string().optional(),
+        // _id: z.string().optional(),
         image: zod_1.z.string().url(),
-        title: zod_1.z.string().min(1),
-        description: zod_1.z.string().min(1),
-        price: zod_1.z.number().nonnegative(),
-        quantity: zod_1.z.number().int().nonnegative(),
-        rating: zod_1.z.number().min(0).max(5),
-        category: zod_1.z.string().min(1),
+        name: zod_1.z.string(),
+        description: zod_1.z.string(),
+        price: zod_1.z.string(),
+        quantity: zod_1.z.string(),
+        rating: zod_1.z.string(),
+        category: zod_1.z.string(),
     }),
 });
 exports.updateProductValidation = zod_1.z.object({
     body: zod_1.z.object({
         _id: zod_1.z.string().optional(),
         image: zod_1.z.string().url().optional(),
-        title: zod_1.z.string().min(1).optional(),
+        titnamele: zod_1.z.string().min(1).optional(),
         description: zod_1.z.string().min(1).optional(),
         price: zod_1.z.number().nonnegative().optional(),
         quantity: zod_1.z.number().int().nonnegative().optional(),

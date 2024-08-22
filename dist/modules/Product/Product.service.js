@@ -13,6 +13,7 @@ exports.ProductServices = void 0;
 const Product_model_1 = require("./Product.model");
 const createProduct = (payLoad) => __awaiter(void 0, void 0, void 0, function* () {
     const result = yield Product_model_1.Product.create(payLoad);
+    console.log(payLoad);
     return result;
 });
 const getAllProduct = (searchTerm) => __awaiter(void 0, void 0, void 0, function* () {
