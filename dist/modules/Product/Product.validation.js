@@ -18,12 +18,12 @@ exports.updateProductValidation = zod_1.z.object({
     body: zod_1.z.object({
         _id: zod_1.z.string().optional(),
         image: zod_1.z.string().url().optional(),
-        titnamele: zod_1.z.string().min(1).optional(),
-        description: zod_1.z.string().min(1).optional(),
-        price: zod_1.z.number().nonnegative().optional(),
-        quantity: zod_1.z.number().int().nonnegative().optional(),
-        rating: zod_1.z.number().min(0).max(5).optional(),
-        category: zod_1.z.string().min(1).optional(),
+        name: zod_1.z.string().optional(),
+        description: zod_1.z.string().optional(),
+        price: zod_1.z.string().optional(),
+        quantity: zod_1.z.string().optional(),
+        rating: zod_1.z.string().optional(),
+        category: zod_1.z.string().optional(),
     }),
 });
 exports.ProductValidation = {

@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Product = exports.ProductSchema = void 0;
 const mongoose_1 = require("mongoose");
 exports.ProductSchema = new mongoose_1.Schema({
+    // _id:{type:String, required: false},
     image: { type: String, required: true },
     name: { type: String, required: true },
     description: { type: String, required: true },

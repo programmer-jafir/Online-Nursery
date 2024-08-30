@@ -16,12 +16,12 @@ export const updateProductValidation = z.object({
   body: z.object({
     _id: z.string().optional(),
     image: z.string().url().optional(),
-    titnamele: z.string().min(1).optional(),
-    description: z.string().min(1).optional(),
-    price: z.number().nonnegative().optional(),
-    quantity: z.number().int().nonnegative().optional(),
-    rating: z.number().min(0).max(5).optional(),
-    category: z.string().min(1).optional(),
+    name: z.string().optional(),
+    description: z.string().optional(),
+    price: z.string().optional(),
+    quantity: z.string().optional(),
+    rating: z.string().optional(),
+    category: z.string().optional(),
   }),
 });
 
